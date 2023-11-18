@@ -1,0 +1,33 @@
+def add(n1,n2):
+    add = n1 + n2
+    return add
+
+def sub(n1,n2):
+    sub = n1 - n2
+    return sub
+
+def mult(n1,n2):
+    mult = n1 * n2
+    return mult
+
+def div(n1,n2):
+    div = n1/n2
+    return div
+
+def main():
+    number1 = int(input("Enter a number: "))
+    number2 = int(input("Enter the second number: "))
+    calulator = str()
+    calulator = input("Enter what type of opporator to use (+,-,*,/): ")
+    if calulator == "+":
+        print(add(number1,number2))
+    elif calulator == "-":
+        print(sub(number1,number2))
+    elif calulator == "*":
+        print(mult(number1,number2))
+    elif calulator == "/":
+        print(div(number1,number2))
+    else:
+        print("try again")
+main()
+
