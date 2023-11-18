@@ -1,0 +1,36 @@
+total_price = 0.0  # Initialize the total price to 0
+discount = 0.0  # Initialize the discount to 0
+discount_total = 0.0  # Initialize the discounted total to 0
+counter = 0  # Initialize the counter to 0
+
+item = int(input("How many items in the cart: "))  # Input should be an integer
+
+if item <= 4:
+    # No discount for 4 or fewer items
+    while counter < item:
+        item_price = float(input("Enter the price of item: "))
+        total_price += item_price
+        counter += 1
+elif item >= 5 and item <= 7:
+    discount = 0.20  # 20% discount for 5-7 items
+    while counter < item:
+        item_price = float(input("Enter the price of item: "))
+        total_price += item_price
+        counter += 1
+    discount_total = total_price * (1 - discount)
+elif item >= 8 and item <= 10:
+    discount = 0.30  # 30% discount for 8-10 items
+    while counter < item:
+        item_price = float(input("Enter the price of item: "))
+        total_price += item_price
+        counter += 1
+    discount_total = total_price * (1 - discount)
+else:
+    discount = 0.40  # 40% discount for 11 or more items
+    while counter < item:
+        item_price = float(input("Enter the price of item: "))
+        total_price += item_price
+        counter += 1
+    discount_total = total_price * (1 - discount)
+
+print("The total is:", discount_total)
