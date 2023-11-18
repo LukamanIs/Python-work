@@ -1,0 +1,33 @@
+#debugging list
+
+# this code ask the user for a number in the list and then finds the highest number and tell you and it also sorted the list by smallest to highest
+
+def get_numbers():
+    numbers= [int()]*5
+    for index in range(5):
+        numbers[index]= int(input("Enter any number: "))
+    return numbers
+
+def find_highest_number(num):
+    highest_number = num[0]
+    for num in num:
+        if num > highest_number:
+            highest_number = num
+    return highest_number
+
+def main():
+# Get the list of numbers from the user
+    number_list = get_numbers()
+
+# Find the highest number in the list
+    highest_number = find_highest_number(number_list)
+
+# Sort the list of numbers
+    sorted_numbers = sorted(number_list)
+
+# Print the results
+    print("Sorted Numbers:", sorted_numbers)
+    print("Highest Number:", highest_number)
+
+main()
+
